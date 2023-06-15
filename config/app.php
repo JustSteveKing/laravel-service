@@ -167,6 +167,11 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+    ])->except([
+        \Illuminate\View\ViewServiceProvider::class,
+        \Illuminate\Broadcasting\BroadcastServiceProvider::class,
+        \Illuminate\Notifications\NotificationServiceProvider::class,
+        \Illuminate\Translation\TranslationServiceProvider::class,
     ])->toArray(),
 
     /*
